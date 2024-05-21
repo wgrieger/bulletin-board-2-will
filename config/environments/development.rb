@@ -1,15 +1,19 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Allow server to be hosted on any URL
   config.hosts.clear
+
   # Allow better_errors to work in online IDE
   config.web_console.allowed_ips = "0.0.0.0/0.0.0.0"
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0.0.0.0"
+
   # Auto-connect to database when rails console opens
   console do
     ActiveRecord::Base.connection
   end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
