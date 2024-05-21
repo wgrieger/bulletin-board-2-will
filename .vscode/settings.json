@@ -68,6 +68,7 @@
     "editor.formatOnSave": false
   },
   "files.associations": {
-    "*.html.erb": "erb"
+    "*.html.erb": "erb",
+    "*.rb": "ruby"
   }
 }
