@@ -38,6 +38,11 @@
       <a href="/boards/<%= a_board.id %>">
         <%= a_board.name %>
       </a>
+
+      <div>
+      <%userid=a_board.user_id%>
+      <%=user_display=User.where(:id=> userid).first.email%>
+      </div>
     </li>
   <% end %>
 </ul>
